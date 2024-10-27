@@ -1,0 +1,12 @@
+import time
+from datetime import datetime
+#set_alarm
+def set_alarm()
+alarm_time = input("Set the alarm time (HH:MM):")
+  try:
+    valid_time = datetime.strptime(alarm_time, "%H:%M")
+    print(f"Alarm set for {valid_time.strftime('%H:%M')}.")
+    return valid_time.time()
+  except ValueError:
+    print("Invalid time format! Please use 'HH:MM' (24-hour format).")
+    return set_alarm()
