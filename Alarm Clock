@@ -20,4 +20,14 @@ def alarm_check(alarm_time):
     if now == alarm_time:
       print("\n Alarm ringing! Wake up! \n")
       break
+  # Wait for 1 second before checking again
     time.sleep(1)
+
+def main():
+    """Main function to run the alarm clock."""
+    alarm_time = set_alarm()  # Set the alarm
+    alarm_check(alarm_time)   # Monitor the time until the alarm triggers
+
+# Run the alarm clock if the script is executed directly
+if __name__ == "__main__":
+    main()
