@@ -37,8 +37,12 @@ def get_weather(city, api_key):
     else:
         # Error handling for unsuccessful requests
         print("Error: Unable to fetch weather data. Please check the city name or your API key.")
-
-
+        
+# Usage example:
+if __name__ == "__main__":
+    city = input("Enter the city name: ")
+    api_key = "your_openweathermap_api_key"  # Replace with your OpenWeatherMap API key
+    get_weather(city, api_key)
         
 
         
